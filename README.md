@@ -96,25 +96,33 @@ The model is trained to detect common agricultural weeds including:
 ## 🔧 Installation
 
 Clone repository
+```
 git clone https://github.com/yourusername/weed-detection-ai.git
 cd weed-detection-ai
-
+```
 Create virtual environment
+```
 python3 -m venv venv
 source venv/bin/activate # On Windows: venv\Scripts\activate
+```
 
 Install dependencies
+```
 pip install -r requirements.txt
+```
 
 Install PyTorch with CUDA support (for GPU)
+```
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-
+```
 Install Ultralytics YOLOv8
+```
 pip install ultralytics
+```
 
-text
 
 ## 🎓 Training the Model
+```
 
 from ultralytics import YOLO
 
@@ -131,12 +139,12 @@ device=0, # GPU device
 project='weed_detection',
 name='yolov8_weed_v1'
 )
-
-text
+```
 
 ## 🔍 Running Inference
 
 ### Real-Time Detection (Webcam/Camera)
+```
 from ultralytics import YOLO
 import cv2
 
@@ -144,35 +152,41 @@ model = YOLO('models/yolov8_weed.pt')
 
 Real-time detection
 results = model.predict(source=0, show=True, conf=0.5)
-
-text
+```
 
 ### Image Detection
 Detect weeds in images
+```
 results = model.predict(source='path/to/image.jpg', save=True)
+```
 
 Get detection results
+```
 for result in results:
 boxes = result.boxes # Bounding boxes
 for box in boxes:
 print(f"Class: {box.cls}, Confidence: {box.conf}")
+```
 
-text
 
 ### Video Processing
 Process video file
+```
 results = model.predict(source='field_video.mp4', save=True, conf=0.6)
-
-text
+```
 
 ## 🤖 Hardware Implementation
 
 ### Deployment on NVIDIA Jetson (Orin Nano/Xavier/Nano)
 Export model to TensorRT for maximum performance
+```
 python src/export.py --weights models/yolov8_weed.pt --format engine --device 0
+```
 
 Run optimized inference on Jetson
+```
 python src/jetson_inference.py --model models/yolov8_weed.engine --source /dev/video0
+```
 
 text
 
