@@ -1,0 +1,1829 @@
+{
+  "session_info": {
+    "timestamp": "20250919_124656",
+    "model_path": "YOLO(\n  (model): DetectionModel(\n    (model): Sequential(\n      (0): Conv(\n        (conv): Conv2d(3, 16, kernel_size=(6, 6), stride=(2, 2), padding=(2, 2))\n        (act): SiLU(inplace=True)\n      )\n      (1): Conv(\n        (conv): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (2): C3(\n        (cv1): Conv(\n          (conv): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(16, 16, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (3): Conv(\n        (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (4): C3(\n        (cv1): Conv(\n          (conv): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n          (1): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (5): Conv(\n        (conv): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (6): C3(\n        (cv1): Conv(\n          (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n          (1): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n          (2): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (7): Conv(\n        (conv): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (8): C3(\n        (cv1): Conv(\n          (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (9): SPPF(\n        (cv1): Conv(\n          (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): MaxPool2d(kernel_size=5, stride=1, padding=2, dilation=1, ceil_mode=False)\n      )\n      (10): Conv(\n        (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (11): Upsample(scale_factor=2.0, mode='nearest')\n      (12): Concat()\n      (13): C3(\n        (cv1): Conv(\n          (conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (14): Conv(\n        (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (15): Upsample(scale_factor=2.0, mode='nearest')\n      (16): Concat()\n      (17): C3(\n        (cv1): Conv(\n          (conv): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (18): Conv(\n        (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (19): Concat()\n      (20): C3(\n        (cv1): Conv(\n          (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (21): Conv(\n        (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))\n        (act): SiLU(inplace=True)\n      )\n      (22): Concat()\n      (23): C3(\n        (cv1): Conv(\n          (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv2): Conv(\n          (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (cv3): Conv(\n          (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))\n          (act): SiLU(inplace=True)\n        )\n        (m): Sequential(\n          (0): Bottleneck(\n            (cv1): Conv(\n              (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (cv2): Conv(\n              (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n          )\n        )\n      )\n      (24): Detect(\n        (cv2): ModuleList(\n          (0): Sequential(\n            (0): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (2): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (1): Sequential(\n            (0): Conv(\n              (conv): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (2): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (2): Sequential(\n            (0): Conv(\n              (conv): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (2): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))\n          )\n        )\n        (cv3): ModuleList(\n          (0): Sequential(\n            (0): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (2): Conv2d(64, 2, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (1): Sequential(\n            (0): Conv(\n              (conv): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (2): Conv2d(64, 2, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (2): Sequential(\n            (0): Conv(\n              (conv): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (1): Conv(\n              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n              (act): SiLU(inplace=True)\n            )\n            (2): Conv2d(64, 2, kernel_size=(1, 1), stride=(1, 1))\n          )\n        )\n        (dfl): DFL(\n          (conv): Conv2d(16, 1, kernel_size=(1, 1), stride=(1, 1), bias=False)\n        )\n      )\n    )\n  )\n)",
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.5,
+    "total_frames_processed": 192,
+    "total_laser_actions": 3
+  },
+  "detection_history": [
+    {
+      "timestamp": 1758266214.605276,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.667937,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.6817513,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.6946995,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.705829,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.7160435,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.728713,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.7400692,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.751071,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.7623944,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.772725,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.7829733,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.793141,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.803047,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.8144274,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.8240116,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.8346777,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.8457146,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.857149,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.8698168,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.8802748,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.8906355,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9009573,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9108458,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9205587,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9300516,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9397845,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9499762,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9596252,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.9692948,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.979932,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266214.990169,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0000117,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0099664,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0195878,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0296066,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0393128,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0503929,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0603027,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.069941,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.0800636,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.090049,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1008644,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1106548,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1204221,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1301339,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.139778,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1492898,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1588676,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1680655,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1784527,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.1889706,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.198708,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2092178,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2193205,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2288177,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2387047,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2483041,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.258017,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2677386,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2786107,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.288225,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.2979062,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.308048,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3174882,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3274808,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3372364,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3475282,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3578343,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3675497,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3768976,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.386328,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.3960648,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.405282,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.4148915,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.4242427,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.4339776,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.44325,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.4526384,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.4620154,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.471418,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.4811263,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.4906914,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5002625,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5103343,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.519671,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5290859,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.538694,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5480692,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5580015,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5677123,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.577461,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5879984,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.5983481,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.6078453,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.618566,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.6289876,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.6385584,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.6489294,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.6594563,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.669557,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.67922,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.6887553,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.6994162,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.709847,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.719645,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.7302003,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.7404835,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.750572,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.760112,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.7699614,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.7797534,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.7894847,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.7993274,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.809356,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.8191762,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.8293319,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.8389502,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.8483155,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.8598826,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.869978,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.8796794,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.8894484,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.899485,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9090805,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9188714,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9284425,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.93788,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9490423,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9593298,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9688592,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9786925,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9881387,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266215.9984367,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.0088348,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.019034,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.0287135,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.0401893,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.0511048,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.0607998,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.070186,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.0798624,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.089146,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.0989256,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.108571,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.1185286,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.1288855,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.1387956,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.148803,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.1593313,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.1687207,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.1792512,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.189113,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.199167,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2087898,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2180657,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2275002,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2370899,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2463644,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.255561,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2648907,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2746062,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.2984593,
+      "detections": [
+        {
+          "timestamp": 1758266216.2984116,
+          "class": "weed",
+          "confidence": 0.2597646415233612,
+          "bbox": [
+            142,
+            508,
+            167,
+            529
+          ],
+          "center": [
+            154,
+            518
+          ],
+          "area": 0.0005696614583333334,
+          "is_weed": true
+        }
+      ],
+      "counts": {
+        "weeds": 1,
+        "crops": 0,
+        "total_detections": 1
+      }
+    },
+    {
+      "timestamp": 1758266216.309302,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.319179,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.329098,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.3385804,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.3492644,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.3591902,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.368702,
+      "detections": [
+        {
+          "timestamp": 1758266216.3686745,
+          "class": "weed",
+          "confidence": 0.2508454918861389,
+          "bbox": [
+            100,
+            563,
+            123,
+            589
+          ],
+          "center": [
+            111,
+            576
+          ],
+          "area": 0.0006488715277777777,
+          "is_weed": true
+        }
+      ],
+      "counts": {
+        "weeds": 1,
+        "crops": 0,
+        "total_detections": 1
+      }
+    },
+    {
+      "timestamp": 1758266216.3783002,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.3879786,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.397565,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.406846,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.418564,
+      "detections": [
+        {
+          "timestamp": 1758266216.4185307,
+          "class": "weed",
+          "confidence": 0.25286903977394104,
+          "bbox": [
+            70,
+            608,
+            95,
+            631
+          ],
+          "center": [
+            82,
+            619
+          ],
+          "area": 0.0006239149305555555,
+          "is_weed": true
+        }
+      ],
+      "counts": {
+        "weeds": 1,
+        "crops": 0,
+        "total_detections": 1
+      }
+    },
+    {
+      "timestamp": 1758266216.427943,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.4374325,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.4466767,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.455989,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.4651825,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.4745052,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.484166,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.4933088,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5027108,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5121202,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5215378,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5312314,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5408435,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5502958,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.559782,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5689268,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    },
+    {
+      "timestamp": 1758266216.5783992,
+      "detections": [],
+      "counts": {
+        "weeds": 0,
+        "crops": 0,
+        "total_detections": 0
+      }
+    }
+  ],
+  "laser_actions": [
+    {
+      "timestamp": 1758266216.298331,
+      "target_x": 154,
+      "target_y": 518,
+      "bbox_area": 0.0005696614583333334,
+      "confidence": 0.2597646415233612,
+      "class_name": "weed",
+      "laser_power": 0.3,
+      "laser_duration": 0.10390585660934448,
+      "status": "LASER_FIRED"
+    },
+    {
+      "timestamp": 1758266216.3686428,
+      "target_x": 111,
+      "target_y": 576,
+      "bbox_area": 0.0006488715277777777,
+      "confidence": 0.2508454918861389,
+      "class_name": "weed",
+      "laser_power": 0.3,
+      "laser_duration": 0.10033819675445557,
+      "status": "LASER_FIRED"
+    },
+    {
+      "timestamp": 1758266216.418494,
+      "target_x": 82,
+      "target_y": 619,
+      "bbox_area": 0.0006239149305555555,
+      "confidence": 0.25286903977394104,
+      "class_name": "weed",
+      "laser_power": 0.3,
+      "laser_duration": 0.10114761590957642,
+      "status": "LASER_FIRED"
+    }
+  ]
+}

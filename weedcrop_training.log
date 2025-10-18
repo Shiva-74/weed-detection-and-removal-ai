@@ -1,0 +1,11 @@
+2025-09-18 11:54:22,454 - INFO - GPU: NVIDIA GeForce RTX 4060
+2025-09-18 11:54:22,454 - INFO - Total Memory: 8.2 GB
+2025-09-18 11:54:22,454 - INFO - Available: 8.2 GB
+2025-09-18 11:54:22,454 - INFO - 🚀 Starting WeedCrop YOLO training...
+2025-09-18 11:54:24,597 - INFO - 🎯 Training Configuration:
+2025-09-18 11:54:24,597 - INFO -   Model: yolov8s
+2025-09-18 11:54:24,597 - INFO -   Epochs: 150
+2025-09-18 11:54:24,597 - INFO -   Batch size: 16
+2025-09-18 11:54:24,597 - INFO -   Image size: 640
+2025-09-18 11:54:24,597 - INFO -   Confidence threshold: 0.15
+2025-09-18 11:54:33,003 - ERROR - Training failed: CUDA out of memory. Tried to allocate 70.00 MiB. GPU 0 has a total capacity of 7.65 GiB of which 33.44 MiB is free. Including non-PyTorch memory, this process has 6.81 GiB memory in use. Of the allocated memory 6.39 GiB is allocated by PyTorch, and 269.84 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

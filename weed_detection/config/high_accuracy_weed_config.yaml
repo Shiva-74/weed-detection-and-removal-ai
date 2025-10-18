@@ -1,0 +1,69 @@
+---
+dataset:
+  path: "data/processed/single_weed_dataset"
+  train: "train/images"
+  val: "val/images"  
+  test: "test/images"
+  nc: 2
+  names: ['crop', 'weed']
+  img_width: 640
+  img_height: 640
+
+model:
+  architecture: "yolov8s"  # More powerful model
+  pretrained: true
+
+training:
+  epochs: 200  # More training for better convergence
+  batch_size: 16
+  image_size: 640
+  learning_rate: 0.01
+  weight_decay: 0.0005
+  momentum: 0.937
+  device: "0"
+  workers: 8
+  patience: 50  # More patience
+  save_period: 10
+
+# Aggressive augmentation for robustness
+augmentation:
+  hsv_h: 0.02
+  hsv_s: 0.4
+  hsv_v: 0.4
+  degrees: 15.0
+  translate: 0.1
+  scale: 0.4
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  mosaic: 1.0
+  mixup: 0.15
+
+optimization:
+  optimizer: "AdamW"
+  close_mosaic: 20
+  amp: true
+
+# OPTIMIZED detection parameters
+detection:
+  conf_threshold: 0.15  # Much lower for high recall
+  iou_threshold: 0.4
+  max_det: 300
+
+export:
+  formats: ['onnx', 'engine']
+  dynamic: false
+  half: true
+  int8: false
+  workspace: 8
+
+deployment:
+  confidence: 0.15  # Lower confidence = catch more weeds
+  iou_threshold: 0.4
+  max_detections: 300
+  agnostic_nms: false
+
+weed_classes: [1]
+crop_classes: [0]
+

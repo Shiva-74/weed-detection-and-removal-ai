@@ -1,0 +1,18 @@
+2025-09-18 12:03:14,747 - INFO - GPU: NVIDIA GeForce RTX 4060
+2025-09-18 12:03:14,748 - INFO - Total: 8.2GB | Free: 8.2GB
+2025-09-18 12:03:14,748 - INFO - Allocated: 0.0GB | Reserved: 0.0GB
+2025-09-18 12:03:14,748 - INFO - 🚀 Starting ultra memory-optimized training...
+2025-09-18 12:03:14,766 - INFO - 🎯 Ultra-Conservative Settings:
+2025-09-18 12:03:14,766 - INFO -   Model: yolov5n (smallest)
+2025-09-18 12:03:14,766 - INFO -   Batch: 4 (very small)
+2025-09-18 12:03:14,766 - INFO -   Image size: 416 (reduced)
+2025-09-18 12:03:14,766 - INFO -   Workers: 4 (reduced)
+2025-09-18 12:03:14,766 - INFO -   Cache: False (memory saving)
+2025-09-18 12:03:14,793 - INFO - Memory before training: 0.0GB
+2025-09-18 12:27:07,387 - INFO - ✅ Model saved: models/memory_opt_weedcrop_20250918_122707.pt
+2025-09-18 12:27:07,387 - INFO - 🔍 Validating model...
+2025-09-18 12:27:09,266 - INFO - 🏆 Validation Results:
+2025-09-18 12:27:09,266 - INFO -   mAP50: 0.572
+2025-09-18 12:27:09,266 - INFO -   mAP50-95: 0.288
+2025-09-18 12:27:09,266 - INFO -   Precision: 0.655
+2025-09-18 12:27:09,266 - INFO -   Recall: 0.503

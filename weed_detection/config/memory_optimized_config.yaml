@@ -1,0 +1,69 @@
+
+---
+dataset:
+  path: "data/processed/combined_weeds"
+  train: "train/images"
+  val: "val/images"
+  test: "test/images"
+  nc: 2
+  names: ["crop", "weed"]
+  img_width: 640
+  img_height: 640
+
+model:
+  architecture: "yolov5n"
+  pretrained: true
+
+training:
+  epochs: 100
+  batch_size: 8
+  image_size: 640
+  learning_rate: 0.005
+  weight_decay: 0.0005
+  momentum: 0.937
+  device: "0"
+  workers: 4
+  patience: 20
+  save_period: 10
+
+augmentation:
+  hsv_h: 0.01
+  hsv_s: 0.3
+  hsv_v: 0.3
+  degrees: 5
+  translate: 0.05
+  scale: 0.3
+  shear: 0
+  perspective: 0
+  flipud: 0
+  fliplr: 0.5
+  mosaic: 0.8
+  mixup: 0
+
+optimization:
+  optimizer: "AdamW"
+  close_mosaic: 10
+  amp: true
+
+# Detection config
+
+detection:
+  conf_threshold: 0.45
+  iou_threshold: 0.3
+  max_det: 100
+
+export:
+  formats: ["onnx", "engine"]
+  dynamic: false
+  half: true
+  int8: false
+  workspace: 4
+
+deployment:
+  confidence: 0.45
+  iou_threshold: 0.3
+  max_detections: 100
+  agnostic_nms: false
+
+weed_classes: [1]
+crop_classes: [0]

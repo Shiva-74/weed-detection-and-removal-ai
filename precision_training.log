@@ -1,0 +1,15 @@
+2025-09-18 10:12:10,381 - INFO - Using GPU: NVIDIA GeForce RTX 4060
+2025-09-18 10:12:10,381 - INFO - GPU Memory: 8.2 GB
+2025-09-18 10:12:10,381 - INFO - Starting precision weed detection training...
+2025-09-18 10:12:10,381 - INFO - Loading yolov8m for precision weed detection...
+2025-09-18 10:17:40,246 - INFO - Using GPU: NVIDIA GeForce RTX 4060
+2025-09-18 10:17:40,246 - INFO - GPU Memory: 8.2 GB
+2025-09-18 10:17:40,246 - INFO - Starting precision weed detection training...
+2025-09-18 10:17:40,315 - INFO - Training configuration:
+2025-09-18 10:17:40,315 - INFO -   Model: yolov8m
+2025-09-18 10:17:40,315 - INFO -   Resolution: 1024px
+2025-09-18 10:17:40,315 - INFO -   Epochs: 150
+2025-09-18 10:17:40,315 - INFO -   Batch size: 16
+2025-09-18 10:17:40,315 - INFO -   Confidence threshold: 0.25
+2025-09-18 10:17:40,315 - INFO -   IoU threshold: 0.3
+2025-09-18 10:17:48,891 - ERROR - Training failed: CUDA out of memory. Tried to allocate 200.00 MiB. GPU 0 has a total capacity of 7.65 GiB of which 174.69 MiB is free. Including non-PyTorch memory, this process has 6.62 GiB memory in use. Of the allocated memory 6.44 GiB is allocated by PyTorch, and 34.61 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,20 @@
+2025-09-18 10:26:29,016 - INFO - GPU: NVIDIA GeForce RTX 4060
+2025-09-18 10:26:29,016 - INFO - Total GPU Memory: 8.2 GB
+2025-09-18 10:26:29,016 - INFO - Allocated: 0.00 GB
+2025-09-18 10:26:29,016 - INFO - Reserved: 0.00 GB
+2025-09-18 10:26:29,016 - INFO - Free: 8.21 GB
+2025-09-18 10:26:29,047 - INFO - Starting memory-optimized precision weed training...
+2025-09-18 10:26:29,965 - INFO - Memory-Optimized Training Configuration:
+2025-09-18 10:26:29,965 - INFO -   Model: yolov5n
+2025-09-18 10:26:29,965 - INFO -   Resolution: 640px
+2025-09-18 10:26:29,965 - INFO -   Batch size: 8
+2025-09-18 10:26:29,965 - INFO -   Epochs: 100
+2025-09-18 10:26:29,965 - INFO -   Confidence threshold: 0.45 (45%)
+2025-09-18 10:26:29,965 - INFO -   Workers: 4
+2025-09-18 10:43:41,656 - INFO - Model saved: models/memory_opt_weed_detector_20250918_104341.pt
+2025-09-18 10:43:41,656 - INFO - Validating model...
+2025-09-18 10:43:43,760 - INFO - Validation Results (Conf ≥ 45%):
+2025-09-18 10:43:43,760 - INFO -   mAP50: 0.4913
+2025-09-18 10:43:43,760 - INFO -   mAP50-95: 0.3179
+2025-09-18 10:43:43,760 - INFO -   Precision: 0.9286
+2025-09-18 10:43:43,760 - INFO -   Recall: 0.0479

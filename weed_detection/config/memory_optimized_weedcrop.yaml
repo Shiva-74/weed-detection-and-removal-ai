@@ -1,0 +1,60 @@
+
+---
+dataset:
+  path: "/path/to/weed-dataset"  # Replace with actual path
+  train: train/images
+  val: valid/images
+  test: test/images
+  nc: 2
+  names: ["crop", "weed"]
+
+model:
+  architecture: "yolov5n"  # Smaller model
+  pretrained: true
+
+training:
+  epochs: 100
+  batch: 4
+  accumulate: 2  # Gradient accumulation to simulate batch size 8
+  image_size: 416  # Lower resolution
+  learning_rate: 0.01
+  weight_decay: 0.0005
+  momentum: 0.937
+  device: 0
+  workers: 4
+  patience: 50
+  save_period: 10
+
+augmentation:
+  hsv_h: 0.02
+  hsv_s: 0.4
+  hsv_v: 0.4
+  degrees: 15.0
+  translate: 0.1
+  scale: 0.4
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  mosaic: 1.0
+  mixup: 0.15
+
+optimization:
+  optimizer: "AdamW"
+  close_mosaic: 20
+  amp: true
+
+# Detection
+
+exec:
+  confidence: 0.25
+  iou: 0.5
+  max_det: 100
+
+deployment:
+  confidence: 0.25
+  iou: 0.5
+  max_det: 100
+
+weed_classes: [1]
+crop_classes: [0]

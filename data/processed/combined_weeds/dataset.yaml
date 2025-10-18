@@ -1,0 +1,8 @@
+names:
+- crop
+- weed
+nc: 2
+path: /home/nmit/hack/weed_detection/precision_weed_system/data/processed/combined_weeds
+test: test/images
+train: train/images
+val: val/images
